@@ -13,6 +13,7 @@ div {
 html {
   height: 100%;
   box-sizing: border-box;
+  
 }
 
 *,
@@ -23,73 +24,99 @@ html {
 
 body {
   	position: relative;
-  	margin: 0;
+  	margin: 0 auto;
   	padding-bottom: 2rem;
   	min-height: 100%;
-
-  	font-family: 'Open Sans', sans-serif;
+  	font-family: 'Courier New', sans-serif;
 	font-size: 1em; 
+	background-color: #f0f5f5;
 }
 
 
 
 #headerDiv {
-	width: 85%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 5rem auto;
+	padding: 2rem;
+	background-color: white;
 }
 
 h1 {
-	color: navy;
-	font-size: 3rem;
+	color: black;
+	font-size: 4rem;
 	font-weight: bold;
 	max-width: 100%;
 	margin: 0 auto;
 	text-align: center;
+
 }
 
 .sectionHeader {
-	margin-left: 2rem;
-	color: orange;
-	font-size: 2rem;
+	margin: 5rem auto;
+	color: white;
+	font-size: 3rem;
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
+	background-color: black;
 }
 
 .sectionContainerDiv {
 	width: 95%;
 	margin: 0 auto;
-}
-
-#petsContainerDiv {
 	text-align: center; /* need this to center div children within */
+}
+#petContainerDiv2 {
+	display: flex;
 }
 
 .petDiv {
 	display: inline-block;
 	min-height: 15rem;
 	width: 32%;
-	margin: 0 auto;
+	margin: 1rem auto;
 	background-size: cover;
+
+
+
+}
+.meetAnimal{
+	position:relative;
+	top: 7rem;
+	opacity:.75;
+	color: black;
+	border-style: ridge;
+	border-color: white;
 }
 
 #pet1Div {
-	background-image: url("images/pet4.jpeg");   		
+	background-image: url("images/pet1.jpeg");  
 }
 
 #pet2Div {
-	background-image: url("images/pet5.jpeg");   		
-	
+	background-image: url("images/pet2.jpeg");	
 }
 
 #pet3Div {
 	background-image: url("images/pet3.jpeg");   		
 	
 }
-
-
+#pet4Div {
+	background-image: url("images/pet4.jpeg");   		
+	
+}
+#pet5Div {
+	background-image: url("images/pet5.jpeg");   		
+	
+}
+#pet6Div {
+	background-image: url("images/pet6.jpg");   		
+	
+}
 
 #adoptText {
-	margin-left: 3rem;
+	margin-top: 5rem;
+	text-align: center;
+	font-size: 2rem;
 }
 
 footer {
@@ -98,10 +125,9 @@ footer {
 
 #footerCopyright {
 	text-align: center;
-	width: 30%;
+	width: 100%;
 	margin: 0 auto;
 	font-size: .8rem;
-
 	position: absolute;
   	right: 0;
   	bottom: 0;
@@ -115,6 +141,131 @@ footer {
 ** the iphone 5, iphone 6, nexus 6P, and iPad. The smallest of these is the iphone5 which
 ** has a width of 320 pixels 
 */
-@media only screen and (max-width: 600px) {
-	
+
+@media screen and (min-width: 320px) and (max-width: 374px) { /*iPhone 5 Responsive Design*/
+	.petDiv{
+		display:block;
+		width: 100%;
+		height: auto;
+	}
+
+	#headerDiv{
+		white-space: nowrap;
+		padding: 1rem;
+	}
+
+	#footerCopyright{
+		white-space: nowrap;
+	}
+
+	h1{
+		font-size: 1.5rem;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.sectionHeader{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 375px) and (max-width: 411px) { /*iPhone 6, Galaxy S5, & Nexus 5X Responsive Design*/
+	.petDiv{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	#headerDiv{
+		white-space: nowrap;
+		padding: 1rem;
+	}
+
+	#footerCopyright{
+		white-space: nowrap;
+	}
+
+	h1{
+		font-size: 1.8rem;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.sectionHeader{
+		font-size: 1.75rem;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 412px) and (max-width: 767px) { /* Nexus 6P  & iPhone 6 Plus Responsive Design*/
+	.petDiv{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	#headerDiv{
+		white-space: nowrap;
+		padding: 1.5rem;
+	}
+
+	#footerCopyright{
+		white-space: nowrap;
+	}
+
+	#adoptText{
+		text-align: center;
+	}
+
+	h1{
+		font-size: 2rem;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.sectionHeader{
+		font-size: 2em;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) { /*iPad & iPad Pro Responsive Design*/
+	.petDiv{
+		display: block;
+		width: 100%;
+		height: 35rem;
+	}
+	.meetAnimal{
+		font-size: 2rem;
+		margin-top: 7.5rem;
+		padding: 1rem 1rem;
+		position: relative;
+		border-style: dotted;
+		border-color: white;
+	}
+	#headerDiv{
+		white-space: nowrap;
+		padding: 3rem;
+	}
+
+	#footerCopyright{
+		white-space: nowrap;
+	}
+
+	#adoptText{
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	h1{
+		font-size: 3.5rem;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.sectionHeader{
+		font-size: 3rem;
+		text-align: center;
+	}
 }
